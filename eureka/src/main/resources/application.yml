@@ -1,0 +1,15 @@
+server:
+  port: 8181
+
+spring:
+  application:
+    name: eureka
+
+eureka:
+  client:
+    # 表示自己就是注册中心，不用注册自己
+    register-with-eureka: false
+    # 表示自己就是注册中心，不用去注册中心获取其他服务的地址
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8181/eureka

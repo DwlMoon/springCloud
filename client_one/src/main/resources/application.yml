@@ -1,0 +1,14 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: client-one
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8181/eureka
+  # 将IP注册到Eureka Server上
+  instance:
+    prefer-ip-address: true
