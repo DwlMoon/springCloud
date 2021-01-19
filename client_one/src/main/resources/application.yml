@@ -12,3 +12,19 @@ eureka:
   # 将IP注册到Eureka Server上
   instance:
     prefer-ip-address: true
+
+
+#为feign开启断路器
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 30000
+        readTimeout: 30000
+        loggerLevel: full
+        retryer:
+          maxAttempts: 3
+          period: 1000
+          maxPeriod: 10000
