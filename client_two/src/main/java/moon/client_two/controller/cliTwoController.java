@@ -22,4 +22,11 @@ public class cliTwoController {
         System.out.println("接收的参数："+name);
         return name+"is success";
     }
+
+
+    @RequestMapping(value = "qwqw",method = RequestMethod.GET)
+    public String test1(){
+        return "WoW!!!!you win";
+    }
+
 }
