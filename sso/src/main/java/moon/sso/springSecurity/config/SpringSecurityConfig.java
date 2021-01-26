@@ -43,9 +43,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/SecurityController/insertUserData","/SecurityController/fail").permitAll()
                 .antMatchers("/static/**").permitAll()
                 .antMatchers("/oauth/**").permitAll()
-                .anyRequest().authenticated();
-//                .and()
-//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .anyRequest().authenticated()
+                .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
 

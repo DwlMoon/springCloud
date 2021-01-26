@@ -34,19 +34,24 @@ feign:
           maxPeriod: 10000
 
 zuul:
+  intelligentsia-authority:
+    ignoredHeaders: Authorization
   routes:
     client-one:
       path: /con/**
       serviceId: client-one
       stripPrefix: true
+      sensitiveHeaders:
     client-two:
       path: /two/**
       serviceId: client-two
       stripPrefix: true
+      sensitiveHeaders:
     sso:
       path: /sso/**
       serviceId: sso
       stripPrefix: true
+      sensitiveHeaders:
 
 ribbon:
   ReadTimeout: 120000  #请求处理的超时时间
@@ -68,4 +73,5 @@ security:
       clientSecret: long
       grant-type: password
       access-token-uri: http://localhost:8800/oauth/token
+
 
