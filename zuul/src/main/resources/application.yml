@@ -65,6 +65,8 @@ security:
     resource:
       tokenInfoUri: http://localhost:8800/oauth/check_token
       preferTokenInfo: true
+      jwt:
+        key-uri: localhost:8800/oauth/token_key
 
     client:
       accessTokenUri: http://localhost:8800/oauth/token
